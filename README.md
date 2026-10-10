@@ -22,3 +22,11 @@ One big button: tap → camera takes a photo → Gemini 2.5 Flash Lite describes
 
 - `public/` — the web app (index.html, styles.css, app.js)
 - `netlify/functions/describe.mjs` — server proxy to OpenRouter; model is set in `MODEL` at the top
+
+## Install as an app (PWA)
+
+Open the deployed HTTPS site, then:
+- **iPhone (Safari):** Share → **Add to Home Screen** → Add.
+- **Android (Chrome):** menu ⋮ → **Install app** (or Add to Home screen).
+
+It then opens full-screen from the home screen with its own icon. Settings are stored per install, so repeat the one-time setup after installing.
