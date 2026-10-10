@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#081322">
+  <title>Navigate — что передо мной?</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <main>
+    <div class="cam">
+      <video id="video" autoplay playsinline muted aria-hidden="true"></video>
+      <p id="cam-empty">Камера выключена</p>
+    </div>
+
+    <section class="answer" aria-labelledby="answer-label">
+      <h1 id="answer-label" class="label">Ответ</h1>
+      <p id="answer">Нажмите большую кнопку, чтобы начать.</p>
+      <div class="sr-only" id="announcer" role="status" aria-live="polite" aria-atomic="true"></div>
+    </section>
+
+    <button id="main" class="main" type="button">Нажмите, чтобы начать</button>
+
+    <div class="row">
+      <button id="repeat" type="button" disabled>Повторить</button>
+      <button id="off" type="button" class="off">Выключить</button>
+    </div>
+
+    <details id="setup">
+      <summary>Для сопровождающего</summary>
+      <div class="setup-body">
+        <label class="consent"><input id="consent" type="checkbox"> Я сопровождающий. Разрешаю отправлять снимки с камеры через сервер проекта в OpenRouter (Google Gemini) для описания. Снимки могут содержать людей и личные вещи. Приложение их не сохраняет; обработка у поставщиков зависит от их условий.</label>
+        <label for="code">Код доступа (если он задан на сервере)</label>
+        <input id="code" type="password" autocomplete="off">
+        <label class="consent"><input id="sound" type="checkbox" checked> Озвучивать ответы самим приложением (выключите, если пользуется TalkBack или VoiceOver)</label>
+        <p class="hint">Как пользоваться: встаньте на месте, держите телефон вертикально, задней камерой вперёд. Каждое нажатие большой кнопки — новый снимок и новое описание. Нажатие во время ответа прерывает его и делает новый снимок.</p>
+      </div>
+    </details>
+
+    <p class="notice">Прототип. Проверяйте стоя на месте, рядом со зрячим сопровождающим. Он не измеряет расстояние, может ошибаться и не заменяет трость или собаку-поводыря.</p>
+  </main>
+</body>
+</html>
